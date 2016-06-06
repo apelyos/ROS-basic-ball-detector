@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<sdf version="1.4">
+  <world name="3doors">
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+    <include>
+      <uri>model://sun</uri>
+    </include>
+    <model name="3doors">
+      
+      <static>true</static>
+      <link name="body">
+	<pose>0 5 0  0 0 0</pose>
+	      <collision name="collision">
+		<geometry>
+		  <mesh><uri>model://3doors/3doors_3ballz.dae</uri></mesh>
+		</geometry>
+	      </collision>
+		<visual name="visual">
+		  <geometry>
+		    <mesh><uri>model://3doors/3doors_3ballz.dae</uri></mesh>
+		  </geometry>
+		</visual>
+      </link>
+    </model>
+  </world>
+</sdf>
