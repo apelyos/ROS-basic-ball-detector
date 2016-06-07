@@ -59,8 +59,8 @@ class BallDetector:
         self.result_pub.publish(String(res))
 
         # optional: show img (debug)
-        cv2.imshow("Image window", cv_image)
-        cv2.waitKey(3)
+        #cv2.imshow("Image window", cv_image)
+        #cv2.waitKey(3)
 
 
 def main():
