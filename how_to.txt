@@ -1,8 +1,16 @@
-install:
+install model:
 copy models/3doors to ~/.gazebo/models/
 
-
-
+to run:
+make sure you have ~/catkin_ws and all the usual ric reqs
+clone https://github.com/robotican/ric into catkin_ws/src/ric
+clone this repo into catkin_ws/src/miniproj
+make sure you have in .bashrc : source ~/catkin_ws/devel/setup.bash
+run: catkin_make (if you haven't already)
+run: rospack list, make sure you see "ric" & "miniproj"
+run: roslaunch miniproj komodo_3doors.launch
+run the python script: color_detector.py as needed
+run the python script: explorer.py as needed
 
 SANDBOX:
 rostopic pub /move_base_simple/goal geometry_msgs/PoseStamped '{header: {stamp: now, frame_id: map}, pose: {position: {x: 5.0, y: 0.0, z: 0.0}, orientation: {w: 1.0}}}'
