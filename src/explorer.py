@@ -25,8 +25,10 @@ class Explorer:
         # What's the closest laser reading
         closest = min(data.ranges)
         #print "closest %f" % closest
-        if (closest < OBSTACLE_RANGE):
+        if closest < OBSTACLE_RANGE:
             self.has_obstacle = True
+        else:
+            self.has_obstacle = False
 
 
     def detector_callback(self, data):
@@ -70,6 +72,7 @@ class Explorer:
     def main_loop(self):
         rate = rospy.Rate(1) # 1hz
         self.mover("STOP") # init
+        #need to init arm to fixed position
 
         while not rospy.is_shutdown():
             rate.sleep()

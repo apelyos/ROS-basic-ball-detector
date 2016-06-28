@@ -1,8 +1,15 @@
 install:
+clone to catkin_ws/src
 copy models/3doors to ~/.gazebo/models/
+run catkin build
+
+to launch:
+roslaunch miniproj komodo_3doors.launch - normal position, or:
+roslaunch miniproj komodo_3doors_reverse.launch - robot in reverse position
 
 
+Note: the launch files automatically runs the the python scripts:
+color_detector.py
+explorer.py
 
 
-SANDBOX:
-rostopic pub /move_base_simple/goal geometry_msgs/PoseStamped '{header: {stamp: now, frame_id: map}, pose: {position: {x: 5.0, y: 0.0, z: 0.0}, orientation: {w: 1.0}}}'
