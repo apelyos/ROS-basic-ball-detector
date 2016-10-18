@@ -17,6 +17,6 @@
 * roslaunch miniproj komodo_3doors.launch - normal position, or:
 * roslaunch miniproj komodo_3doors_reverse.launch - robot in reverse position
 
-* Note: the launch files automatically runs the the python scripts:
+Note: the launch files automatically runs the the python scripts:
 * color_detector.py
 * explorer.py
